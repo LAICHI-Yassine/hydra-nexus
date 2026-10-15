@@ -156,8 +156,10 @@ if prompt := st.chat_input("Ex: Quel est le seuil critique pour la zone A4 ?"):
         with st.spinner("Recherche vectorielle et inférence LLM en cours..."):
             try:
                 # Appel au Backend FastAPI
+                import os
+                api_url = os.getenv("API_URL", "http://127.0.0.1:8000") # Si Docker, utilise API_URL. Sinon (en local), utilise 127.0.0.1.
                 reponse = requests.post(
-                    "http://127.0.0.1:8000/api/assistant",
+                    f"{api_url}/api/assistant",
                     json={"question": prompt}
                 )
                 

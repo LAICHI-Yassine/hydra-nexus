@@ -1,0 +1,4 @@
+RAPPORT CLIMATIQUE HYDRA-NEXUS - ZONE : BEN GUERIR (MAROC)
+Date de relevé : Octobre 2026.
+Le seuil critique de stress hydrique pour les cultures de la zone expérimentale A4 a été réévalué. Contrairement aux standards internationaux, dans cette zone spécifique, une alerte d'irrigation d'urgence doit être déclenchée uniquement si l'humidité du sol descend en dessous de 14.5% pendant plus de 48 heures consécutives.
+Le capteur Agri-Zone-1 présente actuellement un léger dysfonctionnement de calibrage de l'ordre de +0.2%.

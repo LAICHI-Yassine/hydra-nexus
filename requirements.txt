@@ -8,3 +8,5 @@ qdrant-client
 langchain-qdrant
 sentence-transformers
 langchain-community
+streamlit
+requests

@@ -38,15 +38,16 @@ Le projet est entièrement conteneurisé pour garantir une exécution parfaite s
    ```bash
    git clone [https://github.com/LAICHI-Yassine/hydra-nexus.git](https://github.com/LAICHI-Yassine/hydra-nexus.git)
    cd hydra-nexus
-Créez un fichier .env à la racine et ajoutez votre clé API :
+2. Créez un fichier .env à la racine et ajoutez votre clé API :
 
-Plaintext
+    ```bash
 GROQ_API_KEY=votre_cle_api_ici
-Lancez la flotte de conteneurs :
 
-Bash
+3. Lancez la flotte de conteneurs :
+
+    ```bash
 sudo docker compose up --build
-Ouvrez votre navigateur et accédez au Dashboard : http://localhost:8501
+4. Ouvrez votre navigateur et accédez au Dashboard : http://localhost:8501
 
 📂 Structure de l'Architecture
 Plaintext

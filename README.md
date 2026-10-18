@@ -34,35 +34,37 @@ Le projet est entièrement conteneurisé pour garantir une exécution parfaite s
 - Une clé API Groq (gratuite).
 
 ### Instructions
-
 1. Clonez ce dépôt :
    ```bash
    git clone https://github.com/LAICHI-Yassine/hydra-nexus.git
    cd hydra-nexus
+   ```
 
-2. Créez un fichier .env à la racine et ajoutez votre clé API :
-
-    ```bash
-    GROQ_API_KEY=votre_cle_api_ici
+2. Créez un fichier `.env` à la racine et ajoutez votre clé API :
+   ```bash
+   GROQ_API_KEY=votre_cle_api_ici
+   ```
 
 3. Lancez la flotte de conteneurs :
+   ```bash
+   sudo docker compose up --build
+   ```
 
-    ```bash
-    sudo docker compose up --build
+4. Ouvrez votre navigateur et accédez au Dashboard : **`http://localhost:8501`**
 
-4. Ouvrez votre navigateur et accédez au Dashboard : http://localhost:8501
+## 📂 Structure de l'Architecture
+```text
+hydra-nexus/
+├── data/                   # Rapports agricoles bruts (TXT/PDF)
+├── qdrant_db/              # Base de données vectorielle (Générée localement)
+├── main.py                 # Backend (API FastAPI + Logique RAG LangChain)
+├── ui.py                   # Frontend (Dashboard Streamlit)
+├── ingest.py               # Script d'ingestion et de vectorisation des données
+├── Dockerfile.backend      # Recette de conteneurisation de l'API
+├── Dockerfile.frontend     # Recette de conteneurisation de l'Interface
+├── docker-compose.yml      # Orchestrateur réseau
+└── requirements.txt        # Dépendances Python
+```
 
-📂 Structure de l'Architecture
-    ```bash
-    hydra-nexus/
-    ├── data/                   # Rapports agricoles bruts (TXT/PDF)
-    ├── qdrant_db/              # Base de données vectorielle (Générée localement)
-    ├── main.py                 # Backend (API FastAPI + Logique RAG LangChain)
-    ├── ui.py                   # Frontend (Dashboard Streamlit)
-    ├── ingest.py               # Script d'ingestion et de vectorisation des données
-    ├── Dockerfile.backend      # Recette de conteneurisation de l'API
-    ├── Dockerfile.frontend     # Recette de conteneurisation de l'Interface
-    ├── docker-compose.yml      # Orchestrateur réseau
-    └── requirements.txt        # Dépendances Python
-👨‍💻 Auteur
-Conçu et développé par Yassine Laichi dans le cadre de la conception d'architectures d'Intelligence Artificielle appliquées.
+## 👨‍💻 Auteur
+Conçu et développé par **Yassine Laichi** dans le cadre de la conception d'architectures d'Intelligence Artificielle appliquées.

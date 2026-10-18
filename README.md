@@ -34,10 +34,12 @@ Le projet est entièrement conteneurisé pour garantir une exécution parfaite s
 - Une clé API Groq (gratuite).
 
 ### Instructions
+
 1. Clonez ce dépôt :
    ```bash
-   git clone [https://github.com/LAICHI-Yassine/hydra-nexus.git](https://github.com/LAICHI-Yassine/hydra-nexus.git)
+   git clone https://github.com/LAICHI-Yassine/hydra-nexus.git
    cd hydra-nexus
+
 2. Créez un fichier .env à la racine et ajoutez votre clé API :
 
     ```bash
@@ -47,19 +49,20 @@ Le projet est entièrement conteneurisé pour garantir une exécution parfaite s
 
     ```bash
     sudo docker compose up --build
+
 4. Ouvrez votre navigateur et accédez au Dashboard : http://localhost:8501
 
 📂 Structure de l'Architecture
-Plaintext
-hydra-nexus/
-├── data/                   # Rapports agricoles bruts (TXT/PDF)
-├── qdrant_db/              # Base de données vectorielle (Générée localement)
-├── main.py                 # Backend (API FastAPI + Logique RAG LangChain)
-├── ui.py                   # Frontend (Dashboard Streamlit)
-├── ingest.py               # Script d'ingestion et de vectorisation des données
-├── Dockerfile.backend      # Recette de conteneurisation de l'API
-├── Dockerfile.frontend     # Recette de conteneurisation de l'Interface
-├── docker-compose.yml      # Orchestrateur réseau
-└── requirements.txt        # Dépendances Python
+    ```bash
+    hydra-nexus/
+    ├── data/                   # Rapports agricoles bruts (TXT/PDF)
+    ├── qdrant_db/              # Base de données vectorielle (Générée localement)
+    ├── main.py                 # Backend (API FastAPI + Logique RAG LangChain)
+    ├── ui.py                   # Frontend (Dashboard Streamlit)
+    ├── ingest.py               # Script d'ingestion et de vectorisation des données
+    ├── Dockerfile.backend      # Recette de conteneurisation de l'API
+    ├── Dockerfile.frontend     # Recette de conteneurisation de l'Interface
+    ├── docker-compose.yml      # Orchestrateur réseau
+    └── requirements.txt        # Dépendances Python
 👨‍💻 Auteur
 Conçu et développé par Yassine Laichi dans le cadre de la conception d'architectures d'Intelligence Artificielle appliquées.
